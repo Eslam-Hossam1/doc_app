@@ -1,5 +1,6 @@
 import 'package:doc_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class DocLogoAndName extends StatelessWidget {
@@ -13,7 +14,7 @@ class DocLogoAndName extends StatelessWidget {
             children: [
               SvgPicture.asset(Assets.imagesSvgsAppLogo),
               SizedBox(
-                width: 8,
+                width: 8.w,
               ),
               SvgPicture.asset(Assets.imagesSvgsDocdoc),
             ],

@@ -15,6 +15,11 @@ class OnboardingViewBody extends StatelessWidget {
           ),
         ),
         DocLogoAndName(),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 56,
+          ),
+        ),
       ],
     );
   }
