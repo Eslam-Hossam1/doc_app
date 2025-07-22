@@ -1,3 +1,4 @@
+import 'package:doc_app/features/onboarding/presentation/views/widgets/onboarding_view_body.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingView extends StatelessWidget {
@@ -6,6 +7,7 @@ class OnBoardingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: OnboardingViewBody(),
     );
   }
 }
