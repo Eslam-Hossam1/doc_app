@@ -14,13 +14,7 @@ class OnboardingTextSection extends StatelessWidget {
       padding:  EdgeInsets.symmetric(horizontal: 30.w),
       child: Column(
         children: [
-          Text(
-            'Best Doctor\nAppointment App',
-            style: AppTextStyles.bold32.copyWith(
-              color: AppColors.primary100,
-            ),
-            textAlign: TextAlign.center,
-          ),
+          
           SizedBox(
             height: 16.h,
           ),
