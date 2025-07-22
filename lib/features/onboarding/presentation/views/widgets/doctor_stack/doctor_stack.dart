@@ -15,20 +15,23 @@ class DoctorStack extends StatelessWidget {
           alignment: Alignment.center,
           child: DoctorBackgroundLogo(),
         ),
-        Container(
-          foregroundDecoration: BoxDecoration(
-            gradient: LinearGradient(
-              end: Alignment.topCenter,
-              begin: Alignment.bottomCenter,
-              stops: [.14, .38],
-              colors: [
-                Colors.white,
-                Colors.white.withValues(alpha: 0),
-              ],
+        Align(
+          alignment: Alignment.center,
+          child: Container(
+            foregroundDecoration: BoxDecoration(
+              gradient: LinearGradient(
+                end: Alignment.topCenter,
+                begin: Alignment.bottomCenter,
+                stops: [.14, .38],
+                colors: [
+                  Colors.white,
+                  Colors.white.withValues(alpha: 0),
+                ],
+              ),
             ),
-          ),
-          child: Image.asset(
-            Assets.imagesPngsDoctor,
+            child: Image.asset(
+              Assets.imagesPngsDoctor,
+            ),
           ),
         ),
         Positioned(
