@@ -7,7 +7,7 @@ class AuthRoutes {
   static GoRoute login = GoRoute(
     path: RoutePaths.login,
     builder: (context, state) => const Scaffold(
-      body: Text('login placeholder'),
+      body: Center(child: Text('login placeholder')),
     ),
   );
 
