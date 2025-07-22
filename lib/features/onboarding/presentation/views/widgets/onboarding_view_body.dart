@@ -1,5 +1,7 @@
-import 'package:doc_app/core/utils/assets.dart';
 import 'package:doc_app/features/onboarding/presentation/views/widgets/doc_logo_and_name.dart';
+import 'package:doc_app/features/onboarding/presentation/views/widgets/doctor_section.dart';
+import 'package:doc_app/features/onboarding/presentation/views/widgets/doctor_stack/doctor_stack.dart';
+import 'package:doc_app/features/onboarding/presentation/views/widgets/get_start_button.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingViewBody extends StatelessWidget {
@@ -18,6 +20,14 @@ class OnboardingViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: SizedBox(
             height: 56,
+          ),
+        ),
+        DoctorSection(),
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: GetStartButton(),
           ),
         ),
       ],
