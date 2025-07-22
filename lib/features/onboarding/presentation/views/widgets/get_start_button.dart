@@ -10,7 +10,7 @@ class GetStartButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 16.h),
+      padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 32.h),
       child: CustomTextButton(
         backgroundColor: AppColors.primary100,
         child: Text(
