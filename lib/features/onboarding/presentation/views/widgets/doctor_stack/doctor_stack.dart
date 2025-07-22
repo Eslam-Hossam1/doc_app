@@ -39,6 +39,7 @@ class DoctorStack extends StatelessWidget {
             'Best Doctor\nAppointment App',
             style: AppTextStyles.bold32.copyWith(
               color: AppColors.primary100,
+              height: 1.5,
             ),
             textAlign: TextAlign.center,
           ),
