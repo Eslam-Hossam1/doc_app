@@ -1,5 +1,5 @@
 import 'package:doc_app/core/theming/app_colors.dart';
-import 'package:doc_app/core/utils/app_text_styles.dart';
+import 'package:doc_app/core/theming/app_text_styles.dart';
 import 'package:doc_app/features/onboarding/presentation/views/widgets/doctor_stack/doctor_stack.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
