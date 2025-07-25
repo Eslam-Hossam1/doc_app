@@ -39,6 +39,7 @@ dependencies:
   go_router: ^16.0.0
   google_fonts: ^6.2.1
   json_annotation: ^4.9.0
+  pretty_dio_logger: ^1.4.0
   retrofit: ^4.6.0
 
 dev_dependencies:
