@@ -1,6 +1,6 @@
 part of 'login_cubit.dart';
 @freezed
-class LoginState<T> with _$LoginState<T> {
+sealed class LoginState<T> with _$LoginState<T> {
   const factory LoginState.initial() = _Initial;
 
   const factory LoginState.loading() = Loading;
