@@ -1,14 +1,13 @@
 import 'package:doc_app/core/theming/app_colors.dart';
 import 'package:doc_app/core/theming/app_text_styles.dart';
 import 'package:doc_app/core/utils/spacing.dart';
-import 'package:doc_app/core/widgets/custom_text_form_field.dart';
+import 'package:doc_app/features/login/presentation/views/widgets/dont_have_account_text.dart';
 import 'package:doc_app/features/login/presentation/views/widgets/email_and_password.dart';
 import 'package:doc_app/features/login/presentation/views/widgets/login_bloc_listener.dart';
 import 'package:doc_app/features/login/presentation/views/widgets/login_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'widgets/already_have_account_text.dart';
 import 'widgets/terms_and_conditions_text.dart';
 
 class LoginView extends StatefulWidget {
@@ -65,7 +64,7 @@ class _LoginViewState extends State<LoginView> {
                       verticalSpace(16),
                       const TermsAndConditionsText(),
                       verticalSpace(60),
-                      const AlreadyHaveAccountText(),
+                      const DontHaveAccountText(),
                       const LoginBlocListener(),
                     ],
                   ),
