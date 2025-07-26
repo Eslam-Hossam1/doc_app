@@ -3,6 +3,7 @@ import 'package:doc_app/core/api/api_result.dart';
 import 'package:doc_app/features/login/data/models/login_request_body.dart';
 import 'package:doc_app/features/login/data/models/login_response.dart';
 import 'package:doc_app/features/login/data/repos/login_repo.dart';
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'login_state.dart';
@@ -13,6 +14,10 @@ class LoginCubit extends Cubit<LoginState> {
   LoginCubit({required LoginRepo loginRepo})
       : _loginRepo = loginRepo,
         super(LoginState.initial());
+          TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+
   Future<void> login({
     required LoginRequestBody loginRequestBody,
   }) async {
