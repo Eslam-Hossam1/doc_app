@@ -37,8 +37,8 @@ class $ApiResultCopyWith<T, $Res> {
 
 /// @nodoc
 
-class Success<T> implements ApiResult<T> {
-  const Success(this.data);
+class ApiSuccess<T> implements ApiResult<T> {
+  const ApiSuccess(this.data);
 
   final T data;
 
@@ -46,14 +46,14 @@ class Success<T> implements ApiResult<T> {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $SuccessCopyWith<T, Success<T>> get copyWith =>
-      _$SuccessCopyWithImpl<T, Success<T>>(this, _$identity);
+  $ApiSuccessCopyWith<T, ApiSuccess<T>> get copyWith =>
+      _$ApiSuccessCopyWithImpl<T, ApiSuccess<T>>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Success<T> &&
+            other is ApiSuccess<T> &&
             const DeepCollectionEquality().equals(other.data, data));
   }
 
@@ -68,20 +68,22 @@ class Success<T> implements ApiResult<T> {
 }
 
 /// @nodoc
-abstract mixin class $SuccessCopyWith<T, $Res>
+abstract mixin class $ApiSuccessCopyWith<T, $Res>
     implements $ApiResultCopyWith<T, $Res> {
-  factory $SuccessCopyWith(Success<T> value, $Res Function(Success<T>) _then) =
-      _$SuccessCopyWithImpl;
+  factory $ApiSuccessCopyWith(
+          ApiSuccess<T> value, $Res Function(ApiSuccess<T>) _then) =
+      _$ApiSuccessCopyWithImpl;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
-class _$SuccessCopyWithImpl<T, $Res> implements $SuccessCopyWith<T, $Res> {
-  _$SuccessCopyWithImpl(this._self, this._then);
+class _$ApiSuccessCopyWithImpl<T, $Res>
+    implements $ApiSuccessCopyWith<T, $Res> {
+  _$ApiSuccessCopyWithImpl(this._self, this._then);
 
-  final Success<T> _self;
-  final $Res Function(Success<T>) _then;
+  final ApiSuccess<T> _self;
+  final $Res Function(ApiSuccess<T>) _then;
 
   /// Create a copy of ApiResult
   /// with the given fields replaced by the non-null parameter values.
@@ -89,7 +91,7 @@ class _$SuccessCopyWithImpl<T, $Res> implements $SuccessCopyWith<T, $Res> {
   $Res call({
     Object? data = freezed,
   }) {
-    return _then(Success<T>(
+    return _then(ApiSuccess<T>(
       freezed == data
           ? _self.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -100,8 +102,8 @@ class _$SuccessCopyWithImpl<T, $Res> implements $SuccessCopyWith<T, $Res> {
 
 /// @nodoc
 
-class Failure<T> implements ApiResult<T> {
-  const Failure(this.errorHandler);
+class ApiFailure<T> implements ApiResult<T> {
+  const ApiFailure(this.errorHandler);
 
   final ErrorHandler errorHandler;
 
@@ -109,14 +111,14 @@ class Failure<T> implements ApiResult<T> {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $FailureCopyWith<T, Failure<T>> get copyWith =>
-      _$FailureCopyWithImpl<T, Failure<T>>(this, _$identity);
+  $ApiFailureCopyWith<T, ApiFailure<T>> get copyWith =>
+      _$ApiFailureCopyWithImpl<T, ApiFailure<T>>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Failure<T> &&
+            other is ApiFailure<T> &&
             (identical(other.errorHandler, errorHandler) ||
                 other.errorHandler == errorHandler));
   }
@@ -131,20 +133,22 @@ class Failure<T> implements ApiResult<T> {
 }
 
 /// @nodoc
-abstract mixin class $FailureCopyWith<T, $Res>
+abstract mixin class $ApiFailureCopyWith<T, $Res>
     implements $ApiResultCopyWith<T, $Res> {
-  factory $FailureCopyWith(Failure<T> value, $Res Function(Failure<T>) _then) =
-      _$FailureCopyWithImpl;
+  factory $ApiFailureCopyWith(
+          ApiFailure<T> value, $Res Function(ApiFailure<T>) _then) =
+      _$ApiFailureCopyWithImpl;
   @useResult
   $Res call({ErrorHandler errorHandler});
 }
 
 /// @nodoc
-class _$FailureCopyWithImpl<T, $Res> implements $FailureCopyWith<T, $Res> {
-  _$FailureCopyWithImpl(this._self, this._then);
+class _$ApiFailureCopyWithImpl<T, $Res>
+    implements $ApiFailureCopyWith<T, $Res> {
+  _$ApiFailureCopyWithImpl(this._self, this._then);
 
-  final Failure<T> _self;
-  final $Res Function(Failure<T>) _then;
+  final ApiFailure<T> _self;
+  final $Res Function(ApiFailure<T>) _then;
 
   /// Create a copy of ApiResult
   /// with the given fields replaced by the non-null parameter values.
@@ -152,7 +156,7 @@ class _$FailureCopyWithImpl<T, $Res> implements $FailureCopyWith<T, $Res> {
   $Res call({
     Object? errorHandler = null,
   }) {
-    return _then(Failure<T>(
+    return _then(ApiFailure<T>(
       null == errorHandler
           ? _self.errorHandler
           : errorHandler // ignore: cast_nullable_to_non_nullable
