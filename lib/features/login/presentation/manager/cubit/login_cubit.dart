@@ -21,7 +21,7 @@ class LoginCubit extends Cubit<LoginState> {
   Future<void> login() async {
     emit(LoginState.loading());
     LoginRequestBody loginRequestBody = LoginRequestBody(
-      username: emailController.text,
+      email: emailController.text,
       password: passwordController.text,
     );
     ApiResult<LoginResponse> result = await _loginRepo.login(
