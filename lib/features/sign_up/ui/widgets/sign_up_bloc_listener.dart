@@ -64,7 +64,7 @@ class SignupBlocListener extends StatelessWidget {
                 surfaceTintColor: Colors.grey,
               ),
               onPressed: () {
-                context.pushNamed(RoutePaths.login);
+                context.go(RoutePaths.login);
               },
             ),
           ],
